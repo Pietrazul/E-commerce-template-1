@@ -149,6 +149,12 @@ button:active {
   margin: 0 auto;
 }
 
+.row__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*///////////*/
 /*HIGHLIGHTS*/
 /*//////////*/
@@ -243,38 +249,41 @@ button:active {
 }
 
 .book__img--wrapper {
-    margin-bottom: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-    display: flex;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
 }
 
 .book:hover .book__img {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .book__title {
-    font-size: 20px;
-    margin-bottom: 8px;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 .book__title:hover {
-    text-decoration: underline;
-    cursor: no-drop;
+  text-decoration: underline;
+  cursor: no-drop;
 }
 
 .book__ratings {
-    margin-bottom: 8px;
-    color: #fabf2a ;
+  margin-bottom: 8px;
+  color: #fabf2a;
 }
 
 .book__price--normal {
-text-decoration: line-through;
-padding-right: 6px;
-color: lightgrey;
+  text-decoration: line-through;
+  padding-right: 6px;
+  color: lightgrey;
 }
 
-/*////////////*/
-/*LATEST BOOKS*/
-/*////////////*/
+/*//////////////////*/
+/*EXPLORE MORE BOOKS*/
+/*//////////////////*/
 
+#explore {
+  background-color: rgba(115, 66, 214, 0.133);
+}
