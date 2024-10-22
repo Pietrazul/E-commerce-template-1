@@ -8,7 +8,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,18 +23,18 @@ nav {
 
 img {
   width: 100%;
-} 
+}
 
 p {
   line-height: 1.5;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .nav__container {
@@ -86,47 +86,55 @@ li {
 }
 
 .btn__menu {
-    background-color: transparent;
-    font-size: 40px;
-    text-align: center;
-    border: none;
-    color: #7342d6;
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  border: none;
+  color: #7342d6;
+  display: none;
 }
 
 .menu__backdrop {
-    position: absolute;
-    background-color: #242424;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  background-color: #242424;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.menu--open .menu__backdrop {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 
 .menu__links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .menu__list {
-    padding: 32px 0;
+  padding: 32px 0;
 }
 
 .menu__link {
-    font-size: 40px;
-    color: white;
+  font-size: 40px;
+  color: white;
 }
 
 .btn__menu--close {
-    position: absolute;
-    right: 20px;
-    top: 8px;
-    padding: 8px;
-    color: white;
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  padding: 8px;
+  color: white;
 }
 
 /*///////////*/
@@ -216,7 +224,7 @@ button:active {
 }
 
 .no-cursor {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 /*///////////*/
@@ -357,28 +365,37 @@ button:active {
 /*//////*/
 
 footer {
-    background-color: #242424;
+  background-color: #242424;
 }
 
 .footer__logo {
-    display: flex;
+  display: flex;
 }
 
 .footer__logo--img {
-    width: 160px;
-    filter: grayscale(1) invert(1);
+  width: 160px;
+  filter: grayscale(1) invert(1);
 }
 
 .footer__link,
 .footer__copyright {
-    color: white;
+  color: white;
 }
 
-
 .footer__list {
-    margin: 20px 24px 0;
+  margin: 20px 24px 0;
 }
 
 .footer__link {
-padding: 0 8px;
+  padding: 0 8px;
+}
+
+@media (max-width: 550px) {
+  .nav__links {
+    display: none;
+  }
+
+  .btn__menu {
+    display: block;
+  }
 }
